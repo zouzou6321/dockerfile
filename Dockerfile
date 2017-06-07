@@ -89,5 +89,5 @@ RUN set -ex; \
 			\( -type f -a -name '*.pyc' -o -name '*.pyo' \) \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
-
+RUN apt-get -qqy install -y python3-dev
 CMD ["python3"]
